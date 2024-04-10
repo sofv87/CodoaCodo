@@ -1,0 +1,446 @@
+/*
+Esto es un comentario multilinea
+
+sintaxis basica de css: 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
+* {font-family:  "Noto Sans", sans-serif;}
+
+  /*
+selector {
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+}
+
+3 selectores básicos que existen
+id: #id
+class: .clase
+etiqueta: etiqueta
+*/
+
+/*si quiero usar light y dark theme
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #f4f3f6;
+    --background: #080808;
+    --primary: #776d98;
+    --secondary: #cba8bf;
+    --accent: #cba8bf;
+  }
+}
+*/
+
+  :root {
+    --text: #d0d0d0;
+    --background: #080808;
+    --primary: #726892;
+    --secondary: #755f6d;
+    --accent: #82637a;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*sintaxis nuevas css nivel 4 para celular*/
+
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  color:var(--accent);
+  background-color: var(--background);  
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 200;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4rem; margin: 16px;}
+h2 {font-size: 1.5em;margin: 16px; }
+h3 {font-size: 1.2rem;margin: 16px; }
+h4 {font-size: 1.0rem;margin: 16px;}
+h5 {font-size: 1.25rem;margin: 16px;}
+small {font-size: 0.750rem;margin: 16px;}
+
+h1 {
+    font-weight: 100;
+    letter-spacing: 0.1rem;  
+}
+
+h2 {
+  letter-spacing: 0.2rem; 
+  font-weight: 100;
+  line-height: 40px;
+  color: var(--text);
+
+}
+
+
+.header {
+  padding: 10px;
+        position:sticky;
+        top: 0;    
+        z-index:10;
+        background-color: #080808;
+        box-shadow: 10px 0px 64px 0px rgba(0,0,0,0.75);
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+.header ul {
+  list-style: none; 
+          }
+
+.header li{ 
+  display: inline-block; 
+  }
+
+.header li a {
+text-decoration: none;
+color: var(--text);
+width: 150px;
+text-align: center;
+padding: 10px;
+/*border: var(--accent) 1px solid;*/
+font-weight: 200;
+margin: 10px;
+}
+
+
+.cabecera {
+letter-spacing: 0.5rem; 
+font-weight: 200;
+}
+
+.color-effect[resaltado] {
+  background: linear-gradient(120deg,var(--primary),var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-weight: 400;
+}
+
+/*
+.home {
+  background-image: url(../img/Back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+*/
+/*Anidacion, si quiero darle al main un estilo, 
+.main{
+  color:red;
+  .home {color:white}
+  */
+
+.cover {
+  width: 200px;
+  border-radius: 3px;
+}
+
+.inputs {
+  font-weight: 100;
+  color: var(--text);
+}
+
+.fa-brands, .fa-solid{
+    font-size: 50px;
+    color:var(--accent);
+}   
+
+
+.home {
+  height: auto; /*fijarse porque no vh*/
+  background-image: linear-gradient(to top, #080808, #332a4100), url("../img/Back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  flex: row;
+  display:flex;
+  align-items: center;
+  aspect-ratio: 16/9;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/*FLEXBOX LO PUEDO USAR PARA ORDENAR ELEMENTOS  EN EL CONTENIDOR FLEX*/
+/*LO CONTRARIO A FLEX ES GRID*/
+/*EL FLEX PUEDE SER RESPONSIVE AL ADAPTARSE A LOS TAMAÑO DEL VIEWPORT*/
+.cartelera {
+display: flex;
+flex: row;
+justify-content:center;
+flex-wrap: wrap;
+gap: 50px;
+width: 60vw;
+align-items: center;
+margin: 0 auto;
+padding-left: 100px;
+padding-right: 100px;
+height: auto;
+padding-bottom: 50px;
+
+}
+
+.carteleratexto {
+  text-align: center;
+  font-size: 0.75em;
+  background-color: var(--background);
+  color: var(--text);
+  border-radius: 3px;
+  font-weight: 100;
+}
+
+.cartelera2 {
+  display: flex;
+  flex: row;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 60vw;
+  background-color:  #1f1e1e;
+  align-items: center;
+  margin: 100px auto;
+  height: auto;
+  padding-top: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 60px 5px rgba(236, 232, 232, 0.328);
+  }
+
+
+footer {
+  font-weight: 100;
+  color: var(--text);
+
+}
+.fa-whatsapp {
+  color: rgb(76, 174, 76);
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.search-box
+{
+  position:relative;
+  background: #ccc;
+  height: 40px;
+  border-radius:40px;
+  margin: 50px;
+  &:hover{
+    .s-box {
+      width: 200px;
+      padding: 0 6 px;
+    }
+    .s-btn{
+      background:#fff;
+    }
+  }
+  .s-btn{
+    color: var(--accent);
+    float:right;
+    width: 40px;
+    height: 40px;
+    transition:.4s;
+    border-radius:50%;
+    background: #ccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+
+    i{
+      font-size:20px;
+    }
+
+  }
+  .s-box{
+    border: none;
+    background:none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color:var(--accent);
+    font-size:16px;
+    padding: 0px 5px 0px 10px;
+    transition:.5s;
+    line-height:40px;
+    width: 0px;
+  }
+}
+
+
+.usuario {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text);
+
+  border-radius: 50px;
+
+  padding: 20px;
+background-color: #1f1e1e;
+margin-left: 10px;
+margin-right: 10px;
+}
+.usuario:hover {
+  background-color: var(--accent);
+  box-shadow: 10px 0px 64px 0px rgba(236, 232, 232, 0.55);
+
+    }
+.usuariobotones {  margin-top: 70px;
+  margin-bottom: 70px;}
+
+.botones {
+margin-bottom: 50px;
+
+}
+.cover2 img{
+  width: 200px;
+  border-radius: 3px;
+  text-align: center;
+  align-items: center;
+}
+
+.proximamentetexto {
+  width: 200px;
+  font-size: 0.75em;
+  background-color: var(--background);
+  color: var(--text);
+  border-radius: 3px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.peliculasAclamadas{
+    width: 60%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+}
+.galeriaAclamadas{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 60vw;  
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  column-gap: 30px;
+  
+}
+
+.galeriaAclamadas div {
+  width: 200px;
+  flex-shrink: 0;
+  box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
+
+}
+
+.galeriaAclamadas div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #F90; 
+  background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
+}
+
+@media screen and (max-width: 1200px){
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .home {
+    background-image: linear-gradient(to top, #080808, #332a4100), url("../img/Back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: row;
+    display:flex;
+    align-items: center;
+    aspect-ratio: 1/1;
+    text-align: center;
+    justify-content: center;
+    padding-top: 100px;
+  }
+
+
+  .header {
+          display: block;
+          text-align: center;
+          }
+header {
+  align-items: center;
+
+}
+
+}
+
+/*
+.proximamente {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 60vw;
+  background-color:  #1f1e1e;
+  align-items: center;
+  margin: 0px auto;
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-left: 100px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 60px 5px rgba(236, 232, 232, 0.328);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  
+}
+  
+
+.galeriatendencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+justify-content: space-between;
+}
+
+.usuariocarrusel {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+*/

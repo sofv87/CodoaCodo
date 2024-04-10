@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head> <!--Etiqueta hija del html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soflix | Las mejores películas</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b26bc764e0.js" crossorigin="anonymous"></script>
+
+
+
+    <!-- Para agregar icono es u n documento png y uso un medio online para transformarlo en ico-->
+</head>
+
+<body>
+    <header >
+        <nav class="header">
+            <div>
+                <a href="index.html" class="logoempresa">
+                <img src="./img/logo de empresa.svg" alt="logo imagen" width="30">
+
+                </a>
+            </div>
+            <div>
+                <ul>
+               
+                <!--ENLACE O RUTA ABSOLUTA TIENE QUE SER LA DIRECCIÓN COMPLETA DE LINKS O DIRECCION DE CARPETAS O RELATIVO ESTRUCTURA DE CARPETA EN SERVIDOR LOCAL SE PONEN .../ -->
+                <!--submenu?-->
+                <li><a href="#Cartelera">Cartelera</a></li>
+                <li><a href="#Proximamente">Próximamente</a></li>
+                <li><a href="https://www.cinesargentinos.com.ar/cartelera/" target="_blank">Cine presencial</a></li>
+                <li><a href="./pages/Registro.html">Registrarse</a></li>
+                <li><a href="./pages/Sesion.html">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Un unico h1-->
+        <section class="home">
+            <div class="textohome">
+                <h1 style="color: #cba8bf">
+                Las <strong class="color-effect"> mejores</strong> películas están aquí
+                </h1>
+                <h2 style="color: #cba8bf" class="cabecera">Desde <strong> cualquier </strong> dispositivo 
+                </h2>
+                <!--Ancla para acceder a una información en el backend, button cuando tiene que hacer una accion dentro de la pagina y se puede ver-->
+                <div class="usuariobotones">
+                    <a href="./pages/Sesion.html" class="usuario">Ingresar sesión</a>
+                    <a href="./pages/Registro.html" class="usuario">Registrarse</a>
+                </div>
+                <form action="" class="search-box">
+                    <input class="s-box" type="text" name="nombre de pelicula" placeholder="Hoy quiero ver">
+                    <a class="s-btn" href="">
+                    <i class="fas fa-search"></i>
+                    </a>
+                </form>
+            </div>
+        </section>
+
+        <!--para seleccionar varios alt + click los que quiero-->
+
+<section id="Cartelera" class="cartelera2">
+<div >
+<h2>CARTELERA </h2>
+</div>
+<div class="cartelera" >
+
+<div>
+<a href="./pages/Cartelera/Argylle.html">
+<img src="./img/Argylle.jpg" alt="Argylle" class="cover">
+</a>
+<p class="carteleratexto " >ARGYLLE</p>
+</div>
+
+<div>
+<a href="./pages/Cartelera/Barbie.html">
+<img src="./img/Barbie.jpg" alt="Barbie" class="cover">
+</a>
+<p class="carteleratexto ">BARBIE</p>
+</div>
+
+<div>
+<a href="./pages/Cartelera/HauntedMansion.html">
+<img src="./img/HauntedMansion.jpg" alt="HauntedMansion" class="cover">
+</a>
+<p class="carteleratexto ">HAUNTED MANSION</p>
+</div>
+
+<div>
+<a href="./pages/Cartelera/Oppenheimer.html">
+<img src="./img/Oppenheimer.jpg" alt="Oppenheimer" class="cover">
+</a>
+<p class="carteleratexto ">OPPENHEIMER</p>
+</div>
+
+<div>
+<a href="./pages/Cartelera/TheColorPurple.html">
+<img src="./img/TheColorPurple.jpg"alt="The Color Purple" class="cover">
+</a>
+<p class="carteleratexto ">THE COLOR PURPLE</p>
+</div>
+
+<div>
+<a href="./pages/Cartelera/PoorThings.html">
+<img src="./img/PoorThings.jpg" alt="Poor Things"
+class="cover">
+</a>
+<p class="carteleratexto ">POOR THINGS</p>
+</div>
+
+</div>
+</section>
+
+
+
+<!--
+<section id="Proximamente" class="proximamente">
+
+    <div>
+    <h2>Próximamente</h2>
+    </div>
+        <div class="galeriatendencias">
+    
+        <div class="cover2"><img  src="./img/Dune.jpg" alt="Dune" >
+            <p class="proximamentetexto"> DUNE </p>
+            </div>
+        <div class="cover2"><img src="./img/Ferrari.jpg" alt="Ferrari">
+            <p class="proximamentetexto" >FERRARI</p></div>
+            <div class="cover2"><img src="./img/Garfield.jpg" alt="Garfield">
+            <p class="proximamentetexto">GARFIELD</p></div>
+            <div class="cover2"><img src="./img/KungFuPanda4.jpg" alt="KunFu Panda">
+            <p class="proximamentetexto">KUNG FU PANDA 4</p></div>
+            <div class="cover2"> <img src="./img/Beekeeper.jpg" alt="Beekeeper">
+            <p class="proximamentetexto" >BEEKEEPER</p> </div>
+        </div>
+
+    <div >
+        <button class="usuariocarrusel" >Anterior</button>
+        <button class="usuariocarrusel">Próximo</button>
+        </div>
+
+    </section>
+
+-->
+
+<section class="peliculasAclamadas" id="Proximamente">
+<h2>PRÓXIMAMENTE</h2>
+<div class="galeriaAclamadas">
+    <div >
+        <img  src="./img/Dune.jpg" alt="Dune" >
+        <p class="proximamentetexto"> DUNE </p>
+    </div>
+    <div >
+        <img src="./img/Ferrari.jpg" alt="Ferrari">
+        <p class="proximamentetexto">FERRARI</p>
+    </div>
+    <div >
+        <img src="./img/Garfield.jpg" alt="Garfield">
+        <p class="proximamentetexto">GARFIELD</p>
+    </div>
+    <div>
+        <img src="./img/KungFuPanda4.jpg" alt="KunFu Panda">
+        <p class="proximamentetexto"> KUNG FU PANDA 4</p>
+    </div>
+    <div >
+        <img src="./img/Beekeeper.jpg" alt="Beekeeper">
+        <p class="proximamentetexto">BEEKEEPER</p> 
+    </div>
+
+</div>
+</section>
+
+
+
+
+
+
+</section>
+
+    </main>
+    <footer>
+        <ul>
+            <li>Preguntas frecuentes</li>
+            <li>Privacidad</li>
+            <li>Preferencias de cookies</li>
+            <li>Avisos legales</li>
+        </ul>
+        <a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#Principal"><img src="./img/arrow-up-solid.svg" alt="Principal" width="30px"></a>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+<!--Iframes
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WY7TANxMGfQ?si=PMsCD2v4FU7RHDod" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+loading lazy la imagen no se carga hasta que hacemos scroll
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6779106222352!2d-58.3819659!3d-34.612305299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad0b69fb5bb%3A0x85e7c7d81eb928f4!2sLima%20319%2C%20C1073AAG%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1710798690321!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+Iframes-->
+
+<!-- videos
+    <video src="./assets/video/landing.mov" autoplay muted loop "></video>
+-->
