@@ -88,11 +88,7 @@ p {
   font-weight: 400;
 }
 
-footer {
-  font-weight: 400;
-  color: var(--text);
 
-}
 
 .header {
   padding: 10px;
@@ -220,7 +216,8 @@ padding-bottom: 50px;
   width: 60vw;
   background-color:  #1f1e1e;
   align-items: center;
-  margin: 100px auto;
+  margin: 0 auto;
+  margin-bottom: 100px;
   height: auto;
   padding-top: 50px;
   border-radius: 5px;
@@ -349,6 +346,7 @@ margin-bottom: 50px;
 border-radius: 5px;
 padding-left: 20px;
 padding-right: 20px;
+margin-bottom: 100px;
 }
 
 .galeriaAclamadas div {
@@ -381,6 +379,33 @@ padding-right: 20px;
   background-color: var(--secondary); 
   border-radius: 5px;
 }
+
+
+footer {
+  padding: 10px;
+        top: 0;    
+        display: inline-block;
+        flex: row;  display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none; 
+        }
+
+footer ul {
+margin-bottom: 50px;
+text-align: center}
+
+footer li{ 
+  display: inline-block; 
+  text-decoration: none;
+  color: var(--text);
+  text-align: center;
+  padding: 10px;
+  /*border: var(--accent) 1px solid;*/
+  margin: 10px;
+  }
+
+
 
 @media screen and (max-width: 1200px){
   
