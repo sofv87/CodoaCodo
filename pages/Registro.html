@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head> <!--Etiqueta hija del html-->    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="shortcut icon" href="../Favicon.ico" type="image/x-icon"> 
-        <title>Soflix | Las mejores películas</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-        <script src="https://kit.fontawesome.com/b26bc764e0.js" crossorigin="anonymous"></script>
 
-    </head>
+<head> <!--Etiqueta hija del html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soflix | Las mejores películas</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/b26bc764e0.js" crossorigin="anonymous"></script>
+
+
+
+    <!-- Para agregar icono es u n documento png y uso un medio online para transformarlo en ico-->
+</head>
     <body>
         <header>
-            <nav>
+            <nav class="header">
                 <a href="../index.html">
                     <img src="../img/logo de empresa.svg" alt="logo imagen" width="30" loading="lazy">
                    </a>                <ul>
                     <!--ENLACE O RUTA ABSOLUTA TIENE QUE SER LA DIRECCIÓN COMPLETA DE LINKS O DIRECCION DE CARPETAS O RELATIVO ESTRUCTURA DE CARPETA EN SERVIDOR LOCAL SE PONEN .../ -->
-                    <li><a href="./Peliculas.html">Películas</a></li>
-                    <li><a href="./registro.html">Registrarse</a></li>
+                    <li><a href="../index.html">Cartelera</a></li>
+                    <li><a href="../index.html">Próximamente</a></li>
                     <li><a href="https://www.cinesargentinos.com.ar/cartelera/" target="_blank">Cine presencial</a></li>
+                    <li><a href="./registro.html">Registrarse</a></li>
                     <li><a href="./Sesion.html">Iniciar sesión</a></li>
                 </ul>
             </nav>
             <!--loading lazy la imagen no se carga hasta que hacemos scroll-->
         </header>
-        <main>
-            <section id="Registro" >
+        <main class="home" >
+            <section>
             <h1>Registrate aquí</h1>
-        </section>
+            <div>
             <form action="validar.php" method="post"class="inputs">
                 <div>
                     <label for="name">Ingrese su nombre</label>
@@ -67,31 +67,32 @@
                     <input type="checkbox" value="acepto" name="terminos" id="terminos">
                     <label for="terminos">Acepto términos y condiciones</label>
                 </div>
-                <div>
-                    <input type="reset" value="Restablecer">
-                    <input type="submit" value="Registrarme">
+                <div class="usuariobotones">
+                    <input type="reset" value="Restablecer" class="usuario">
+                    <input type="submit" value="Registrarme" class="usuario">
                 </div>
                 <div>
                 </div>
             </form>
-            <a href="#Registro"><img src="../img/arrow-up-solid.svg" alt="Principal"  width="30px"></a>
+        </div>
+        </section>
 
         </main>
 
         <footer>
-            <table>
-                <tr>
-                    <td>Preguntas frecuentes</td> 
-                    <td>Privacidad</td>
-                <tr>
-                    <td>Avisos legales</td>
-                    <td>Cuenta</td>
-                </tr>
-                <tr>
-                    <td>Preferencias de cookies</td>
-                    <td>Términos de uso</td>
-                </tr>
-            </table>
+            <ul>
+                <li>Preguntas frecuentes</li>
+                <li>Privacidad</li>
+                <li>Preferencias de cookies</li>
+                <li>Avisos legales</li>
+                <li><a href="#Principal"><img src="../img/arrow-up-solid.svg" alt="Principal" width="15px"></a></li>
+            </ul>
+            <a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    
         </footer>
+    
+    
     </body>
+    
+    </html>
 </html>

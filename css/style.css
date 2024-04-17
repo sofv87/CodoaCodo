@@ -225,7 +225,8 @@ padding-bottom: 50px;
   }
 
 
-
+input {border: none;
+}
 .fa-whatsapp {
   color: rgb(76, 174, 76);
   position: fixed;
@@ -427,6 +428,7 @@ footer li{
     justify-content: center;
     padding-top: 100px;
   }
+
 
 
   .header {
