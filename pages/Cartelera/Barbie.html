@@ -16,20 +16,27 @@
 
     </head>
     <body>
-        <header>
-            <nav>
-                <a href="../../index.html">
-                    <img src="../../img/logo de empresa.svg" alt="logo imagen" width="30" loading="lazy">
-                   </a>                 
-                   <ul>
+        <header >
+            <nav class="header">
+                <div>
+                    <a href="index.html" class="logoempresa">
+                    <img src="../../img/logo de empresa.svg"  alt="logo imagen" width="30">
+    
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                   
                     <!--ENLACE O RUTA ABSOLUTA TIENE QUE SER LA DIRECCIÓN COMPLETA DE LINKS O DIRECCION DE CARPETAS O RELATIVO ESTRUCTURA DE CARPETA EN SERVIDOR LOCAL SE PONEN .../ -->
-                    <li><a href="../Peliculas.html">Películas</a></li>
-                    <li><a href="../registro.html">Registrarse</a></li>
+                    <!--submenu?-->
+                    <li><a href="#Cartelera">Cartelera</a></li>
+                    <li><a href="#Proximamente">Próximamente</a></li>
                     <li><a href="https://www.cinesargentinos.com.ar/cartelera/" target="_blank">Cine presencial</a></li>
-                    <li><a href="../Sesion.html">Iniciar sesión</a></li>
-                </ul>
+                    <li><a href="../../pages/Registro.html">Registrarse</a></li>
+                    <li><a href="../../pages/Sesion.html">Iniciar sesión</a></li>
+                    </ul>
+                </div>
             </nav>
-            <!--loading lazy la imagen no se carga hasta que hacemos scroll-->
         </header>
         <main>
             <section id="Barbie">
@@ -42,21 +49,15 @@
         </main>
 
         <footer>
-            <table>
-                <tr>
-                    <td>Preguntas frecuentes</td> 
-                    <td>Privacidad</td>
-                <tr>
-                    <td>Avisos legales</td>
-                    <td>Cuenta</td>
-                </tr>
-                <tr>
-                    <td>Preferencias de cookies</td>
-                    <td>Términos de uso</td>
-                </tr>
-            </table>
-            <a href="#Barbie"><img src="../../img/arrow-up-solid.svg" alt="Principal"  width="30px"></a>
-
+            <ul>
+                <li>Preguntas frecuentes</li>
+                <li>Privacidad</li>
+                <li>Preferencias de cookies</li>
+                <li>Avisos legales</li>
+                <li><a href="#Principal"><img src="../../img/arrow-up-solid.svg" alt="Principal" width="15px"></a></li>
+            </ul>
+            <a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    
         </footer>
     </body>
 </html>

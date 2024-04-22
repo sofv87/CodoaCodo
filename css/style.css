@@ -301,6 +301,8 @@ margin-right: 10px;
   box-shadow: 10px 0px 64px 0px rgba(236, 232, 232, 0.55);
 
     }
+
+
 .usuariobotones {  margin-top: 70px;
   margin-bottom: 70px;}
 
@@ -406,6 +408,56 @@ footer li{
   margin: 10px;
   }
 
+  .search-box2
+  {text-align: center;
+    position:relative;
+    background: #ccc;
+    height: 30px;
+    border-radius:40px;
+    margin-top:10px;
+    margin-bottom: 20px;
+    width: 200px;
+    &:hover{
+      .s-box {
+        width: 200px;
+        padding-left: 20px;
+      }
+      .s-btn{
+        background:#fff;
+      }
+    }
+    .s-btn{
+      color: var(--accent);
+      float:right;
+      width: 40px;
+      height: 40px;
+      transition:.4s;
+      border-radius:50%;
+      background: #ccc;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+  
+      i{
+        font-size:20px;
+      }
+  
+    }
+    .s-box{
+      border: none;
+      background:none;
+      outline:none;
+      float:left;
+      padding: 0;
+      color:var(--accent);
+      font-size:16px;
+      padding: 0px 0px 0px 0px;
+      transition:.5s;
+      line-height:40px;
+      width: 0px;
+    }
+  }
 
 
 @media screen and (max-width: 1200px){
@@ -428,6 +480,8 @@ footer li{
     justify-content: center;
     padding-top: 100px;
   }
+
+
 
 
 
