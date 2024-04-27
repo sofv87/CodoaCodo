@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/b26bc764e0.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Para agregar icono es u n documento png y uso un medio online para transformarlo en ico-->
 </head>
 <body>
@@ -58,69 +59,73 @@
 
         <!--para seleccionar varios alt + click los que quiero-->
 
-<section id="Cartelera" class="cartelera2">
+<section id="Cartelera" class="cartelera2"data-aos="fade-up">
 <div >
 <h2>CARTELERA </h2>
 </div>
+
 <div class="cartelera" >
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/Argylle.html">
-<img src="./img/Argylle.jpg" alt="Argylle" class="cover">
+<img src="./img/Argylle.jpg" alt="Argylle" >
 </a>
 <p class="carteleratexto " >ARGYLLE</p>
 </div>
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/Barbie.html">
-<img src="./img/Barbie.jpg" alt="Barbie" class="cover">
+<img src="./img/Barbie.jpg" alt="Barbie" >
 </a>
 <p class="carteleratexto ">BARBIE</p>
 </div>
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/HauntedMansion.html">
-<img src="./img/HauntedMansion.jpg" alt="HauntedMansion" class="cover">
+<img src="./img/HauntedMansion.jpg" alt="HauntedMansion" >
 </a>
 <p class="carteleratexto ">HAUNTED MANSION</p>
 </div>
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/Oppenheimer.html">
-<img src="./img/Oppenheimer.jpg" alt="Oppenheimer" class="cover">
+<img src="./img/Oppenheimer.jpg" alt="Oppenheimer">
 </a>
 <p class="carteleratexto ">OPPENHEIMER</p>
 </div>
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/TheColorPurple.html">
-<img src="./img/TheColorPurple.jpg"alt="The Color Purple" class="cover">
+<img src="./img/TheColorPurple.jpg"alt="The Color Purple">
 </a>
 <p class="carteleratexto ">THE COLOR PURPLE</p>
 </div>
 
-<div>
+<div class="cover">
 <a href="./pages/Cartelera/PoorThings.html">
 <img src="./img/PoorThings.jpg" alt="Poor Things"
-class="cover">
+>
 </a>
 <p class="carteleratexto ">POOR THINGS</p>
 </div>
 
-<div>
-    <a href="./pages/Cartelera/">
-    <img src="./img/Birdman.jpg" alt="Birdman"
-    class="cover">
-    </a>
-    <p class="carteleratexto ">BIRDMAN</p>
-    </div>
-    <div>
-        <a href="./pages/Cartelera">
-        <img src="./img/LaChimera.jpg" alt="La Chimera"
-        class="cover">
-        </a>
-        <p class="carteleratexto ">LA CHIMERA</p>
-        </div>
+<div class="cover">
+<a href="./pages/Cartelera/">
+<img src="./img/Birdman.jpg" alt="Birdman"
+>
+</a>
+<p class="carteleratexto ">BIRDMAN</p>
+</div>
+
+<div class="cover">
+<a href="./pages/Cartelera">
+<img src="./img/LaChimera.jpg" alt="La Chimera"
+>
+</a>
+<p class="carteleratexto ">LA CHIMERA</p>
+</div>
+
+
 </div>
 </section>
 
@@ -156,7 +161,7 @@ class="cover">
 
 -->
 
-<section class="peliculasAclamadas" id="Proximamente">
+<section class="peliculasAclamadas" id="Proximamente"data-aos="fade-up">
 <h2>PRÓXIMAMENTE</h2>
 <div class="galeriaAclamadas">
     <div >
@@ -207,7 +212,10 @@ class="cover">
 
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

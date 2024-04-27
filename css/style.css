@@ -150,9 +150,20 @@ font-weight: 400;
 
 .cover {
   width: 200px;
+  height: 320px;
   border-radius: 3px;
+  overflow: hidden;
+  :hover {
+  transform: scale(1.2);
+}
+ 
 }
 
+.cover img {
+  width: 200px;
+ height: 300px;
+ transition: 1s;
+}
 .inputs {
   font-weight: 100;
   color: var(--text);
