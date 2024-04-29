@@ -58,7 +58,7 @@ body {
   background-color: var(--background);  
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,h6 {
   font-weight: 300;
 }
 
@@ -69,6 +69,7 @@ h2 {font-size: 1.5em;margin: 16px; }
 h3 {font-size: 1.2rem;margin: 16px; }
 h4 {font-size: 1.0rem;margin: 16px;}
 h5 {font-size: 1.25rem;margin: 16px;}
+h6 {font-size: 0,75rem;margin: 16px;}
 small {font-size: 0.750rem;margin: 16px;}
 
 h1 {
@@ -88,7 +89,11 @@ p {
   font-weight: 400;
 }
 
-
+h6 {
+  font-weight: 300;
+  line-height: 10px;
+  color: var(--text);
+}
 
 .header {
   padding: 10px;
@@ -177,7 +182,7 @@ font-weight: 400;
 
 .home {
   height: auto; /*fijarse porque no vh*/
-  background-image: linear-gradient(to top, #080808, #332a4100), url("../img/Back.jpg");
+  background-image:  url("../img/Back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -470,6 +475,45 @@ footer li{
     }
   }
 
+  .homedetalle {  height: auto; /*fijarse porque no vh*/
+    background-image: url("../img/ArgylleBack.jpg") ;
+    background-size: 16/9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: row;
+    display:flex;
+    aspect-ratio: 16/4;
+    text-align: center;
+    justify-content: center;
+  opacity: 0.5;}
+
+  .detalle {
+    display: flex;
+    flex: row;
+    justify-content:center;
+    width: 80vw;
+    background-color:  #1f1e1e;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5vh;
+    height: auto;
+    padding-top: 50px;
+padding: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 60px 5px rgba(236, 232, 232, 0.328);
+    }
+  
+  .detalleimagen {
+    height: 30vh;
+    flex: row;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+
+  }
+  .detalletexto {
+    margin-left: 5vw;
+  }
 
 @media screen and (max-width: 1200px){
   
@@ -504,6 +548,10 @@ header {
   align-items: center;
 
 }
+
+
+
+
 
 }
 
