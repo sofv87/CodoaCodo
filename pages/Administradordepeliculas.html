@@ -31,26 +31,33 @@
         </header>
         <main class="home" >
             <section>
-            <h1>Registrate aquí</h1>
+            <h1>Ingrese sus pelis</h1>
             <div>
             <form action="validar.php" method="post"class="inputs">
-
-                <div ><label for="name" >Ingrese su nombre</label></div>
+                
+                <div class="formadm">
+                <div class="titulosadm" ><label for="name" >Ingrese su nombre</label></div>
                 <div><input class="search-box2"type="text" name="nombre" id="name" placeholder="Nombre" required></div>
-                
-                <div ><label for="apellido" >Ingrese su apellido</label></div>
+            </div>
+        
+            <div class="formadm">
+                <div class="titulosadm" ><label for="apellido" >Ingrese su apellido</label></div>
                 <div><input class="search-box2"type="text" name="apellido" id="apellido" placeholder="Apellido" required></div>
-                
-                <div ><label for="email ">Ingrese su email</label></div>
+            </div>
+            <div class="formadm">
+                <div class="titulosadm" ><label for="email ">Ingrese su email</label></div>
                 <div><input class="search-box2"type="email" name="email" id="email" placeholder="Email" required></div>
-
-                <div><label for="password" >Ingrese su contraseña</label></div>
+            </div>
+            <div class="formadm">
+                <div class="titulosadm" ><label for="password" >Ingrese su contraseña</label></div>
                 <div><input class="search-box2"type="password" name="password" id="password" placeholder="Password" required></div>
-                
-                <div><label for="Fecha" > Ingrese su fecha de nacimiento</label></div>
+            </div>
+            <div class="formadm">
+                <div class="titulosadm" ><label for="Fecha" >Ingrese su fecha de nacimiento</label></div>
                 <div><input class="search-box2"type="date" name="nacimiento" id="nacimiento" placeholder="nacimiento" required></div>
-               
-                <div ><label for="pais">Ingrese país</label></div>
+            </div>
+            <div class="formadm">
+                <div class="titulosadm" ><label for="pais">Ingrese país</label></div>
                     <select class="search-box2"name="pais" id="pais">
                         <option value="argentina" selected>Argentina</option>
                         <option value="brasil">Brasil</option>
@@ -58,16 +65,19 @@
                         <option value="uruguay">Uruguay</option>
                     </select>
                 </div>
-                <div>
+            <div>
+                <div >
                     <input type="checkbox" value="acepto" name="terminos" id="terminos">
                     <label for="terminos">Acepto términos y condiciones</label>
-                </div></div>
+                </div>
+            </div>
+            <div>
                 <div class="usuariobotones">
                     <input type="reset" value="Restablecer" class="usuario">
                     <input type="submit" value="Registrarme" class="usuario">
                 </div>
-                <div>
-                </div>
+            </div>
+</div>
             </form>
         </div>
         </section>

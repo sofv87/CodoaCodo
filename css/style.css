@@ -513,10 +513,15 @@ padding: 50px;
   }
   .detalletexto {
     margin-left: 5vw;
+
   }
 
 @media screen and (max-width: 1200px){
-  
+
+
+
+
+
   h1 {
     font-size: 2.5rem;
   }
@@ -537,9 +542,6 @@ padding: 50px;
   }
 
 
-
-
-
   .header {
           display: block;
           text-align: center;
@@ -548,9 +550,28 @@ header {
   align-items: center;
 
 }
+.detalle {
+  display: flex;
+  flex: row;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 60vw;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+  height: auto;
+  padding-bottom: 50px;
+  text-align: center;
+  
+  }
+  
+  .detalletexto {
+    margin-left: 0vw;
 
-
-
+  }
 
 
 }
