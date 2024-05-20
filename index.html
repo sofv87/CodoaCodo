@@ -35,6 +35,7 @@
         </nav>
     </header>
     <main>
+
         <!--Un unico h1-->
         <section class="home">
             <div>
@@ -191,8 +192,133 @@
 </div>
 
 </section>
+<!--
+   <title>Información del Clima</title>
+    <!-- Bootstrap CSS -->
+ <section> 
+    <!DOCTYPE html>
+    <html lang="es">
+    
+    <head> <!--Etiqueta hija del html-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soflix | Las mejores películas</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://kit.fontawesome.com/b26bc764e0.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Para agregar icono es u n documento png y uso un medio online para transformarlo en ico-->
+    </head>
+<body>
 
+    <div class="container " data-aos="fade-up">
+        <div class="card ">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0 ">La info sobre el clima</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-body"><span><strong>Ciudad &nbsp; </strong>  </span> <span id="city"></span></p>
+                <p class="card-body"><span><strong>Temperatura &nbsp; </strong> </span> <span id="temperature"></span> °C</p>
+                <p class="card-body"><span><strong>Clima &nbsp; </strong> </span> <span id="weather"></span> </p>
+                <p class="card-body"><span><strong>Humedad &nbsp; </strong></span> <span id="humidity"></span>%</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+                // Función para obtener datos del clima
+        async function fetchWeather(city) {
+            // Definir la URL de la API del clima
+            const url = "https://api.openweathermap.org/data/2.5/weather";
+            // Clave de API para acceder a la API del clima
+            const apiKey = "21e3195e9bfeb6879e788ec605b09ab0";
+            // Unidades de medida para la temperatura (en este caso, Celsius)
+            const units = "metric";
+            // Idioma para los datos de respuesta (en este caso, español)
+            const lang = "es";
+
+            // Realizar una solicitud GET a la API del clima
+            const response = await fetch(`${url}?q=${city}&appid=${apiKey}&units=${units}&lang=${lang}`);
+            // Convertir la respuesta a formato JSON
+            const data = await response.json();
+            // Devolver los datos del clima
+            return data;
+        }
+
+        // Función para actualizar la tarjeta con los datos del clima
+        async function updateWeatherCard(city) {
+            // Obtener los datos del clima para la ciudad especificada
+            const weatherData = await fetchWeather(city);
+            console.log(weatherData);
+            // Actualizar el elemento HTML con el nombre de la ciudad
+            document.getElementById("city").textContent = weatherData.name;
+            // Actualizar el elemento HTML con la temperatura
+            document.getElementById("temperature").textContent = weatherData.main.temp;
+            // Actualizar el elemento HTML con la descripción del clima
+            document.getElementById("weather").textContent = weatherData.weather[0].description;
+            // Actualizar el elemento HTML con la humedad
+            document.getElementById("humidity").textContent = weatherData.main.humidity;
+            // Actualizar el elemento HTML con la velocidad del viento
+            document.getElementById("windSpeed").textContent = weatherData.wind.speed;
+            // Obtener el código del icono del clima
+            const iconCode = weatherData.weather[0].icon;
+            // Construir la URL del icono del clima
+            const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
+            // Actualizar el elemento HTML con el ícono del clima
+            document.getElementById("weatherIcon").src = iconUrl;
+            // Establecer el atributo "alt" del ícono del clima con la descripción del clima
+            document.getElementById("weatherIcon").alt = weatherData.weather[0].description;
+        }
+
+        // Llamar a la función updateWeatherCard con la ciudad de "Buenos Aires"
+        updateWeatherCard("Buenos Aires");
+
+        /*
+            async es una palabra clave que se utiliza para definir funciones asincrónicas. Las funciones asincrónicas retornan una promesa y permiten utilizar la palabra clave await dentro de ellas.
+            await es una palabra clave que se utiliza para esperar la resolución de una promesa. En el contexto de una función asincrónica, await pausa la ejecución de la función hasta que la promesa se resuelva y devuelve el resultado.
+            En el código proporcionado, la función fetchWeather es asincrónica porque realiza una solicitud a la API del clima, que es una operación asíncrona. Al utilizar await junto con fetch, la función espera a que la solicitud se complete y devuelve los datos del clima.
+            En la función updateWeatherCard, utilizamos await al llamar a fetchWeather para obtener los datos del clima para una ciudad específica. Esto asegura que la función espere a que se completen las solicitudes antes de actualizar la tarjeta con los datos del clima.
+        */
+    </script>
+
+</section>
+
+<!--
+<section class="peliculasANTERIORES" id="ANTERIORES"data-aos="fade-up">
+    <h2>ANTERIORES</h2>
+    <div class="galeriaANTERIORES">
+        <div >
+            <img  src="./img/Dune.jpg" alt="Dune" >
+            <p class="ANTERIOREStexto"> DUNE </p>
+        </div>
+        <div >
+            <img src="./img/Ferrari.jpg" alt="Ferrari">
+            <p class="ANTERIOREStexto">FERRARI</p>
+        </div>
+        <div >
+            <img src="./img/Garfield.jpg" alt="Garfield">
+            <p class="ANTERIOREStexto">GARFIELD</p>
+        </div>
+        <div>
+            <img src="./img/KungFuPanda4.jpg" alt="KunFu Panda">
+            <p class="ANTERIOREStexto"> KUNG FU PANDA 4</p>
+        </div>
+        <div >
+            <img src="./img/Beekeeper.jpg" alt="Beekeeper">
+            <p class="ANTERIOREStexto">BEEKEEPER</p> 
+        </div>
+        <div >
+            <img src="./img/SuperMarioBros.jpg" alt="Super Mario Bros">
+            <p class="ANTERIOREStexto">SUPER MARIO BROS</p> 
+        </div>
+    </div>
+    
+    </section>
+    -->
 
 
 
@@ -216,6 +342,85 @@
     <script>
         AOS.init();
       </script>
+   <script>
+    // funcion que crea las tarjetas de peliculas
+       // Función para crear una tarjeta (card) de película
+       function crearTarjetaPelicula(pelicula) {
+        // Crear elementos de la tarjeta de película
+        // creamos la columna de bootstrap 
+        const card = document.createElement('div');
+        card.classList.add('col-12','col-md-3', 'pelicula-card');
+        // estamos creando la tarjeta
+        const cardInner = document.createElement('div');
+        cardInner.classList.add('card');
+        // creo la imagen de la tarjeta
+        const cardImg = document.createElement('img');
+        cardImg.classList.add('card-img-top');
+
+        cardImg.src = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`;
+        cardImg.alt = pelicula.title;
+        cardImg.loading = 'lazy';
+       
+
+        // creamos el cuerpo de la tarjeta
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.classList.add('card-title');
+        cardTitle.textContent = pelicula.title;
+
+         // Añadir elementos a la tarjeta de película
+        cardBody.appendChild(cardTitle);
+        cardInner.appendChild(cardImg);
+        cardInner.appendChild(cardBody);
+        // agrego la tarejta a la columna de bootstrap
+        card.appendChild(cardInner);
+
+        return card;
+    }
+    // datos de la api
+    const API_SERVER = 'https://api.themoviedb.org/3';
+    const options = {
+        method: 'GET', // Método de la petición (GET)
+        headers: {
+            accept: 'application/json', // Tipo de respuesta esperada (JSON)
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTJjYTAwZDYxZWIzOTEyYjZlNzc4MDA4YWQ3ZmNjOCIsInN1YiI6IjYyODJmNmYwMTQ5NTY1MDA2NmI1NjlhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4MJSPDJhhpbHHJyNYBtH_uCZh4o0e3xGhZpcBIDy-Y8'
+            
+        }
+    };
+    // Función para cargar películas en la seccion del index
+    const cargarPeliculas = async (page = 1) => {
+        try{
+            // Realizamos una petición fetch a la API para obtener las películas populares
+            const response = await fetch(`${API_SERVER}/movie/popular?page=${page}`, options);
+            console.log(response);
+            const data = await response.json(); // Convertimos la respuesta a JSON
+            console.log(data);
+            const movies = data.results;// Extraemos las películas de la respuesta, array de objetos de peliculas
+            console.log(movies);
+            const peliculasSection = document.getElementById('peliculasSection');
+            peliculasSection.innerHTML = '';// Limpiamos el contenido previo del contenedor
+            movies.forEach(movie => {
+                const peliculaCard = crearTarjetaPelicula(movie);// Iteramos sobre las películas
+                peliculasSection.appendChild(peliculaCard);// Añadimos la tarjeta de película al contenedor
+            });// Iteramos sobre las películas
+        }catch(error){
+            console.error(error);
+        }
+     
+
+    };
+  
+
+
+     // Llamar a la función para agregar las tarjetas de películas cuando el DOM esté cargado
+     // document.addEventListener("DOMContentLoaded", agregarTarjetasPeliculas);
+     // agregarTarjetasPeliculas();
+     document.addEventListener("DOMContentLoaded", () => { cargarPeliculas(1)});
+    // cargarPeliculas.addEventListener('click', cargarPeliculas);
+</script>
+<script src="./js/validacion_simple.js"></script>
 
 </body>
 
