@@ -34,17 +34,19 @@
             <section id="Sesion" >
             <h1>Iniciar sesión</h1>
             <div>
-            <form action="validar.php" method="post" class="inputs">
+            <form id="loginForm" >
             
 
-                <div ><label for="email ">Ingrese su email</label></div>
+                <div ><label for="email " >Ingrese su email</label></div>
                 <div><input class="search-box2"type="email" name="email" id="email" placeholder="Email" required></div>
 
+                
                 <div><label for="password" >Ingrese su contraseña</label></div>
                 <div><input class="search-box2"type="password" name="password" id="password" placeholder="Password" required></div>
-                
+
                 <div class="usuariobotones">
-                        <input type="reset" value="Iniciar sesión" class="usuario">
+                        <input type="submit" value="Iniciar sesión" class="usuario" id="loginForm">
+                        
                         <a href="./Registro.html" class="usuario">Registrarse</a>
                     </div>
 
@@ -67,6 +69,7 @@
     
         </footer>
     
-        <script src="./js/validacion_simple.js"></script>
+        <script src="../js/validacion_simple.js">
+        </script>
     </body>
 </html>
