@@ -33,42 +33,66 @@
             <section>
             <h1>Registrate aquí</h1>
             <div>
-            <form action="validar.php" method="post"class="inputs">
-
-                <div ><label for="name" >Ingrese su nombre</label></div>
-                <div><input class="search-box2"type="text" name="nombre" id="name" placeholder="Nombre" required></div>
-                
-                <div ><label for="apellido" >Ingrese su apellido</label></div>
-                <div><input class="search-box2"type="text" name="apellido" id="apellido" placeholder="Apellido" required></div>
-                
-                <div ><label for="email ">Ingrese su email</label></div>
-                <div><input class="search-box2"type="email" name="email" id="email" placeholder="Email" required></div>
-
-                <div><label for="password" >Ingrese su contraseña</label></div>
-                <div><input class="search-box2"type="password" name="password" id="password" placeholder="Password" required></div>
-                
-                <div><label for="Fecha" > Ingrese su fecha de nacimiento</label></div>
-                <div><input class="search-box2"type="date" name="nacimiento" id="nacimiento" placeholder="nacimiento" required></div>
-               
-                <div ><label for="pais">Ingrese país</label></div>
-                    <select class="search-box2"name="pais" id="pais">
-                        <option value="argentina" selected>Argentina</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="chile">Chile</option>
-                        <option value="uruguay">Uruguay</option>
-                    </select>
-                </div>
-                <div>
-                    <input type="checkbox" value="acepto" name="terminos" id="terminos">
-                    <label for="terminos">Acepto términos y condiciones</label>
-                </div></div>
-                <div class="usuariobotones">
-                    <input type="reset" value="Restablecer" class="usuario">
-                    <input type="submit" value="Registrarme" class="usuario">
-                </div>
-                <div>
-                </div>
-            </form>
+                <form action="validar.php" method="post" class="inputs" id="registrationForm">
+                    <div>
+                        <label for="name">Ingrese su nombre</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="text" name="nombre" id="name" placeholder="Nombre" required>
+                    </div>
+            
+                    <div>
+                        <label for="apellido">Ingrese su apellido</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                    </div>
+            
+                    <div>
+                        <label for="email">Ingrese su email</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+            
+                    <div>
+                        <label for="password">Ingrese su contraseña</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
+            
+                    <div>
+                        <label for="Fecha">Ingrese su fecha de nacimiento</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="date" name="nacimiento" id="nacimiento" placeholder="nacimiento" required>
+                    </div>
+            
+                    <div>
+                        <label for="pais">Ingrese país</label>
+                    </div>
+                    <div>
+                        <select class="search-box2" name="pais" id="pais">
+                            <option value="argentina" selected>Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chile">Chile</option>
+                            <option value="uruguay">Uruguay</option>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <input type="checkbox" value="acepto" name="terminos" id="terminos" required>
+                        <label for="terminos">Acepto términos y condiciones</label>
+                    </div>
+            
+                    <div class="usuariobotones">
+                        <input type="reset" value="Restablecer" class="usuario">
+                        <input type="submit" value="Registrarme" class="usuario">
+                    </div>
+                </form>
+            
+ 
         </div>
         </section>
 
@@ -87,8 +111,30 @@
     
         </footer>
     
-        <script src="./js/validacion_simple.js"></script>
-    </body>
+        <script>
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                var form = event.target;
+    
+                // Verificación de que todos los campos requeridos están llenos
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    alert('Por favor, complete todos los campos requeridos.');
+                    return;
+                }
+    
+                // Verificación de que los términos y condiciones han sido aceptados
+                var terminos = document.getElementById('terminos');
+                if (!terminos.checked) {
+                    event.preventDefault();
+                    alert('Debe aceptar los términos y condiciones.');
+                    return;
+                }
+    
+                // Puedes añadir más validaciones aquí
+    
+                alert('Formulario enviado correctamente.');
+            });
+        </script>    </body>
     
     </html>
 </html>

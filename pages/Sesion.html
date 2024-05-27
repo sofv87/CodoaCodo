@@ -34,23 +34,26 @@
             <section id="Sesion" >
             <h1>Iniciar sesión</h1>
             <div>
-            <form id="loginForm" >
+                <form id="loginForm">
+                    <div>
+                        <label for="email">Ingrese su email</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="password">Ingrese su contraseña</label>
+                    </div>
+                    <div>
+                        <input class="search-box2" type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
             
-
-                <div ><label for="email " >Ingrese su email</label></div>
-                <div><input class="search-box2"type="email" name="email" id="email" placeholder="Email" required></div>
-
-                
-                <div><label for="password" >Ingrese su contraseña</label></div>
-                <div><input class="search-box2"type="password" name="password" id="password" placeholder="Password" required></div>
-
-                <div class="usuariobotones">
-                        <input type="submit" value="Iniciar sesión" class="usuario" id="loginForm">
-                        
+                    <div class="usuariobotones">
+                        <input type="submit" value="Iniciar sesión" class="usuario">
                         <a href="./Registro.html" class="usuario">Registrarse</a>
                     </div>
-
-            </form>
+                </form>
         </div>
         </section>
 
@@ -69,7 +72,32 @@
     
         </footer>
     
-        <script src="../js/validacion_simple.js">
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Previene el envío del formulario
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+    
+                // Validación simple
+                if (email === '') {
+                    alert('Por favor, ingrese su email.');
+                    return;
+                }
+    
+                if (password === '') {
+                    alert('Por favor, ingrese su contraseña.');
+                    return;
+                }
+    
+                // Aquí puedes añadir más validaciones o enviar los datos a un servidor
+                console.log('Email:', email);
+                console.log('Password:', password);
+    
+                // Simula un envío exitoso
+                alert('Inicio de sesión exitoso');
+            });
         </script>
     </body>
 </html>
